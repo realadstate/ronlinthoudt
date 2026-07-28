@@ -266,6 +266,60 @@ textarea{min-height:150px;resize:vertical}
 form .knop{width:100%;text-align:center}
 .fijn{font-size:12px;color:var(--ink-muted);margin:0}
 
+/* ---------- Lijstentester ---------- */
+.tester-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:56px;align-items:start}
+.tester-links{display:flex;flex-direction:column;gap:22px}
+.tester-wand{position:relative;aspect-ratio:4/3;min-height:380px;background:var(--cream);
+  overflow:hidden;border:1px solid var(--line-soft);transition:background .2s}
+.tester-plint{position:absolute;left:0;right:0;bottom:0;height:18%;background:var(--beige)}
+.tester-plintlat{position:absolute;left:0;right:0;bottom:18%;height:12px;background:var(--cream);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tester-toneel{position:absolute;inset:0;z-index:2;display:flex;align-items:center;
+  justify-content:center;padding:40px 40px 96px}
+.tester-lijst{display:block;
+  box-shadow:5px 5px 0 -1px rgba(46,68,48,.16),14px 26px 40px -22px rgba(46,68,48,.5);
+  transition:padding .2s,background-color .2s}
+.tester-lijst.glans{background-image:linear-gradient(135deg,rgba(255,255,255,.32),rgba(0,0,0,.14))}
+.tester-doek{display:block;height:min(340px,40vh);background-size:cover;background-position:center}
+.tester-onder{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tester-titel{display:block;font-size:20px;font-weight:400;letter-spacing:.04em;color:var(--moss-deep)}
+.tester-meta{display:block;margin-top:6px;font-size:11px;letter-spacing:.20em;
+  text-transform:uppercase;color:var(--ink-muted)}
+.tester-lijstnaam{display:flex;align-items:center;gap:8px;margin:0;font-size:11px;
+  letter-spacing:.20em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.tester-lijstnaam::before{content:"";width:18px;height:2px;background:var(--ochre);flex:none}
+.tester-paneel{display:flex;flex-direction:column;gap:32px}
+.tester-blok{display:flex;flex-direction:column;gap:12px}
+.tester-label{font-size:11px;font-weight:300;letter-spacing:.30em;text-transform:uppercase;color:var(--ink-muted)}
+.tester-minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.tester-minis button{padding:0;cursor:pointer;background:none;border:1px solid var(--line);
+  opacity:.72;transition:opacity .2s,border-color .2s}
+.tester-minis button span{display:block;width:100%;aspect-ratio:1/1;background-size:cover;background-position:center}
+.tester-minis button[aria-pressed="true"]{border-color:var(--moss);outline:1px solid var(--moss);
+  outline-offset:1px;opacity:1}
+.tester-lijsten{display:flex;flex-direction:column;max-height:340px;overflow-y:auto;
+  border-bottom:1px solid var(--line)}
+.tester-lijsten button{font-family:var(--font-core);display:flex;align-items:center;gap:12px;width:100%;
+  padding:12px 14px;cursor:pointer;text-align:left;background:none;
+  border:0;border-top:1px solid var(--line);transition:background .2s}
+.tester-lijsten button[aria-pressed="true"]{background:var(--beige)}
+.tester-staal{display:block;width:22px;height:22px;flex:none;border:1px solid rgba(30,28,25,.2)}
+.tester-staal.glans{background-image:linear-gradient(135deg,rgba(255,255,255,.32),rgba(0,0,0,.14))}
+.tester-staal.leeg{border:1px dashed var(--ink-muted)}
+.tester-lijsten .naam{display:block;font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--moss-deep)}
+.tester-lijsten .uitleg{display:block;margin-top:3px;font-size:10px;font-weight:300;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)}
+.tester-schuifkop{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.tester-schuifkop output{font-size:12px;font-weight:300;color:var(--ink-soft)}
+.tester-paneel input[type="range"]{width:100%;accent-color:var(--moss);padding:0;border:0;background:none}
+.tester-wanden{display:flex;flex-wrap:wrap;gap:8px}
+.tester-wanden button{width:32px;height:32px;padding:0;cursor:pointer;
+  border:1px solid var(--line);transition:border-color .2s}
+.tester-wanden button[aria-pressed="true"]{border-color:var(--moss);outline:1px solid var(--moss);outline-offset:1px}
+.tester-voorleggen{display:flex;flex-direction:column;gap:16px;align-items:flex-start;
+  padding-top:24px;border-top:1px solid var(--line)}
+.tester-voorleggen p{margin:0;font-size:13px;color:var(--ink-soft)}
+
 /* ---------- Voettekst ---------- */
 .voet{background:var(--moss);color:var(--green-light);padding:60px 0 26px;font-size:14px}
 .voet-kolommen{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px}
@@ -319,6 +373,9 @@ form .knop{width:100%;text-align:center}
   .twee-koloms,.contact-grid,.detail-binnen{grid-template-columns:1fr;gap:0}
   .hero-vervolg{grid-template-columns:1fr;gap:30px}
   .twee-koloms,.contact-grid{gap:38px}
+  .tester-grid{grid-template-columns:1fr;gap:38px}
+  .tester-wand{min-height:300px}
+  .tester-toneel{padding:24px 24px 76px}
   .galerie,.galerie.vijf{grid-template-columns:repeat(2,1fr);gap:28px 18px}
   .hamburger{display:block}
   .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);
