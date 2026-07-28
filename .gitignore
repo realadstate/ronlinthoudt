@@ -1,0 +1,17 @@
+# macOS / Windows rommel
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Originele foto's (te groot voor de repo — bewaar die lokaal)
+originelen/
+*.CR2
+*.NEF
+*.tif
+*.tiff

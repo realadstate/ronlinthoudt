@@ -1,0 +1,12 @@
+# Opvang voor oude Exto-links.
+# Deze regels doen alleen iets als je ronlinthoudt.nl later alsnog
+# naar deze site laat wijzen. Ze schaden verder niets.
+/kunstwerken.html      /werk.html    301
+/kunstwerken/*         /werk.html    301
+/kunstwerk/*           /werk.html    301
+/kunstkopen.html       /werk.html    301
+/kunstkaarten.html     /werk.html    301
+/index/*               /over.html    301
+/nieuwsbrief.html      /contact.html 301
+/gast.html             /contact.html 301
+/reageer/*             /contact.html 301
