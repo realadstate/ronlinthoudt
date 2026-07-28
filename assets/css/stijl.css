@@ -358,6 +358,20 @@ form .knop{width:100%;text-align:center}
   display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
   font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-line)}
 
+/* ---------- Cookiebanner ---------- */
+.cookiebanner{position:fixed;left:24px;bottom:24px;z-index:80;max-width:420px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--schaduw);padding:24px 26px}
+.cookiebanner h2{font-size:15px;font-weight:400;letter-spacing:.04em;margin:0 0 8px}
+.cookiebanner p{font-size:13.5px;line-height:1.6;color:var(--ink-soft);margin:0 0 16px}
+.cookiebanner p a{text-decoration:underline}
+.cookiebanner .acties{display:flex;gap:10px;flex-wrap:wrap}
+.cookiebanner .knop{padding:11px 18px;font-size:11px}
+.voet .cookie-voorkeuren{display:block;background:none;border:0;padding:0;margin-bottom:10px;
+  font:inherit;color:var(--cream);cursor:pointer;text-align:left}
+.voet .cookie-voorkeuren:hover{color:#fff;text-decoration:underline}
+@media(max-width:560px){.cookiebanner{left:12px;right:12px;bottom:12px;max-width:none}}
+
 /* ---------- Detailweergave ---------- */
 .detail{position:fixed;inset:0;z-index:90;background:rgba(30,40,31,.94);
   display:none;align-items:center;justify-content:center;padding:40px 24px}
