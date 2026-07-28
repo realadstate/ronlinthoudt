@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ron Linthoudt — site.js
+   Ron Linthoudt · site.js
    Regelt het mobiele menu, de galerie met filters en de detailweergave.
    Je hoeft hier normaal gesproken niets in aan te passen.
    ========================================================================== */
@@ -45,7 +45,7 @@
       '<button type="button" data-index="' + index + '">' +
         '<span class="lijst">' +
           '<img src="' + pad + 'img/schilderijen/klein/' + ontsnap(w.slug) + '.webp" ' +
-            'alt="' + ontsnap(w.titel) + ' — ' + ontsnap(w.techniek) + ', ' + ontsnap(w.jaar) + '" ' +
+            'alt="' + ontsnap(w.titel) + ', ' + ontsnap(w.techniek) + ', ' + ontsnap(w.jaar) + '" ' +
             'width="' + w.w + '" height="' + w.h + '" loading="lazy" decoding="async">' +
         '</span>' +
         '<h3>' + ontsnap(w.titel) + '</h3>' +
@@ -204,7 +204,7 @@
     var meerdere = huidigeLijst.length > 1;
     binnen.innerHTML =
       '<img src="img/schilderijen/' + ontsnap(w.slug) + '.webp" ' +
-        'alt="' + ontsnap(w.titel) + ' — ' + ontsnap(w.techniek) + ', ' + ontsnap(w.afmetingen) + '">' +
+        'alt="' + ontsnap(w.titel) + ', ' + ontsnap(w.techniek) + ', ' + ontsnap(w.afmetingen) + '">' +
       '<div class="detail-info">' +
         '<h2>' + ontsnap(w.titel) + '</h2>' +
         '<div class="jr">' + ontsnap(w.jaar) + ' · ' + ontsnap(w.categorie) + '</div>' +
@@ -219,8 +219,11 @@
           : (w.status === 'te koop'
               ? '<p class="toelichting">Prijs op aanvraag.</p>'
               : '<p class="toelichting">Dit werk is niet beschikbaar. Vergelijkbaar werk in opdracht is bespreekbaar.</p>')) +
-        '<a class="knop vol" href="contact.html?werk=' + encodeURIComponent(w.titel + ' (' + w.jaar + ')') + '">Afspraak aanvragen</a>' +
-        (meerdere ? '<p class="toelichting" style="margin-top:22px">' + (huidig + 1) + ' van ' + huidigeLijst.length + ' — blader met de pijltjestoetsen</p>' : '') +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+          '<a class="knop vol" href="contact.html?werk=' + encodeURIComponent(w.titel + ' (' + w.jaar + ')') + '">Afspraak aanvragen</a>' +
+          '<a class="knop omlijnd-licht" href="lijsten.html?werk=' + encodeURIComponent(w.slug) + '">Bekijk met lijst</a>' +
+        '</div>' +
+        (meerdere ? '<p class="toelichting" style="margin-top:22px">' + (huidig + 1) + ' van ' + huidigeLijst.length + ' · blader met de pijltjestoetsen</p>' : '') +
       '</div>';
     if (history.replaceState) history.replaceState(null, '', '#' + w.slug);
   }

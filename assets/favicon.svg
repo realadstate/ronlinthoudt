@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ingelijst stilleven in de huisstijl: oker lijst, crème doek, mosgroene wand -->
   <rect width="64" height="64" rx="14" fill="#4E7350"/>
-  <text x="32" y="43" text-anchor="middle" fill="#F5F2E6"
-        font-family="Jost, Helvetica, Arial, sans-serif" font-size="26" font-weight="300" letter-spacing="1">rl</text>
+  <rect x="15" y="13" width="34" height="38" fill="#C79242"/>
+  <rect x="20" y="18" width="24" height="28" fill="#F5F2E6"/>
+  <rect x="20" y="38" width="24" height="8" fill="#E7DCC6"/>
+  <circle cx="32" cy="34.5" r="5.5" fill="#C79242"/>
 </svg>

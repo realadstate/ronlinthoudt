@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ron Linthoudt — lijsten.js
+   Ron Linthoudt · lijsten.js
    De lijstentester: kies een schilderij, een lijst, de lijstbreedte en de
    wandkleur en zie het resultaat direct aan de wand. De schilderijgegevens
    komen uit data/schilderijen.js; wil je andere werken in de tester, pas
@@ -44,7 +44,30 @@
     { naam: 'terracotta',    kleur: '#9A4A2E' }
   ];
 
-  var stand = { werk: 0, lijst: 3, breedte: 6, wand: 0 };
+  var stand = { werk: 0, lijst: 3, breedte: 4, wand: 0 };
+
+  /* De weergave is op ware schaal: de wand toont VELD_CM centimeter breedte,
+     de bank is BANK_CM breed. Uit "80 x 60 cm" (hoogte x breedte) volgt de
+     echte maat van het doek. */
+  var VELD_CM = 320;
+  var BANK_CM = 220;
+  function maatVan(w) {
+    var m = /(\d+)\s*x\s*(\d+)/.exec(w.afmetingen || '');
+    if (m) return { h: Number(m[1]), b: Number(m[2]) };
+    return { h: 60, b: Math.round(60 * w.w / w.h) };
+  }
+
+  /* Vanuit de detailweergave ('Bekijk met lijst') komt een schilderij binnen
+     via ?werk=<slug>. Staat het niet tussen de vaste zes, dan komt het vooraan. */
+  var gevraagd = new URLSearchParams(location.search).get('werk');
+  if (gevraagd) {
+    var extra = SCHILDERIJEN.filter(function (w) { return w.slug === gevraagd; })[0];
+    if (extra) {
+      var plek = werken.indexOf(extra);
+      if (plek === -1) { werken.unshift(extra); plek = 0; }
+      stand.werk = plek;
+    }
+  }
 
   var lijstEl = document.getElementById('tester-lijst');
   var doekEl = document.getElementById('tester-doek');
@@ -117,26 +140,47 @@
   function teken() {
     var w = werken[stand.werk];
     var l = LIJSTEN[stand.lijst];
-    var breedte = l.kleur ? stand.breedte : 0;
+    var breedteCm = l.kleur ? stand.breedte : 0;
+    var maat = maatVan(w);
 
-    lijstEl.style.padding = breedte + 'px';
+    /* Schaal: pixels per centimeter, afgeleid van de wandbreedte */
+    var bank = document.getElementById('tester-bank');
+    var wandB = wand.clientWidth;
+    var wandH = wand.clientHeight;
+    var schaal = wandB / VELD_CM;
+    var vloer = wandH * 0.18;
+
+    /* De bank staat op de vloer, iets voor de plint */
+    var bankBodem = vloer * 0.45;
+    var bankH = 92 * schaal;
+    bank.style.width = (BANK_CM * schaal) + 'px';
+    bank.style.bottom = bankBodem + 'px';
+
+    /* Het doek op ware grootte; het hangt op ooghoogte, maar altijd vrij van de bank */
+    var bankTop = bankBodem + bankH - 6 * schaal;
+    var doekBodem = Math.max(bankTop + 18 * schaal, vloer + (140 - maat.h / 2) * schaal);
+    doekEl.style.width = (maat.b * schaal) + 'px';
+    doekEl.style.height = (maat.h * schaal) + 'px';
+    lijstEl.style.bottom = doekBodem + 'px';
+    lijstEl.style.padding = (breedteCm * schaal) + 'px';
     lijstEl.style.backgroundColor = l.kleur || 'transparent';
     lijstEl.classList.toggle('glans', l.glans);
-    doekEl.style.backgroundImage = 'url("img/schilderijen/klein/' + w.slug + '.webp")';
-    doekEl.style.aspectRatio = w.w + ' / ' + w.h;
-    doekEl.style.boxShadow = l.sponning ? 'inset 0 0 0 1px ' + l.sponning : 'none';
-    doekEl.setAttribute('aria-label', w.titel + ' — ' + w.techniek + ', ' + w.jaar);
+    doekEl.src = 'img/schilderijen/klein/' + w.slug + '.webp';
+    doekEl.alt = w.titel + ', ' + w.techniek + ', ' + w.jaar;
+    /* dunne rand waar de lijst over het doek valt; inset-schaduw werkt niet op een img */
+    doekEl.style.outline = l.sponning ? '1px solid ' + l.sponning : 'none';
+    doekEl.style.outlineOffset = '-1px';
     wand.style.backgroundColor = WANDEN[stand.wand].kleur;
 
     titelEl.textContent = w.titel;
     metaEl.textContent = [w.techniek, w.afmetingen, w.jaar].join(' · ');
     lijstnaamEl.textContent = l.kleur ? l.naam + ' · ' + l.uitleg : 'zonder lijst · doek op spieraam';
-    breedteEl.textContent = l.kleur ? stand.breedte + ' mm profiel' : 'geen lijst gekozen';
+    breedteEl.textContent = l.kleur ? stand.breedte + ' cm profiel' : 'geen lijst gekozen';
     schuif.disabled = !l.kleur;
 
     /* Het contactformulier neemt de keuze over via het werk-veld */
     var keuze = w.titel + ' (' + w.jaar + ')' +
-      ' · lijst: ' + (l.kleur ? l.naam + ', ' + stand.breedte + ' mm' : 'zonder lijst') +
+      ' · lijst: ' + (l.kleur ? l.naam + ', ' + stand.breedte + ' cm' : 'zonder lijst') +
       ' · wand: ' + WANDEN[stand.wand].naam;
     cta.href = 'contact.html?werk=' + encodeURIComponent(keuze);
 
@@ -144,6 +188,8 @@
     drukKnoppen(lijsten, stand.lijst);
     drukKnoppen(wanden, stand.wand);
   }
+
+  window.addEventListener('resize', teken);
 
   teken();
 })();

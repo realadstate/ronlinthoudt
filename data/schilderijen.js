@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SCHILDERIJEN — dit is het enige bestand dat je hoeft aan te passen
+   SCHILDERIJEN · dit is het enige bestand dat je hoeft aan te passen
    als er een schilderij bijkomt, verkocht is of van prijs verandert.
    --------------------------------------------------------------------------
    Een nieuw schilderij toevoegen? Kopieer een blok tussen { en }, plaats het

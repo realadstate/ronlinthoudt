@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lijsten testen — Ron Linthoudt</title>
+<title>Lijsten testen · Ron Linthoudt</title>
 <meta name="description" content="Probeer online welke lijst bij een schilderij van Ron Linthoudt past: kies een werk, een lijstprofiel, de lijstbreedte en de wandkleur. De definitieve keuze maakt u in het atelier.">
 <link rel="canonical" href="https://linthoudt.nl/lijsten.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Ron Linthoudt">
-<meta property="og:title" content="Lijsten testen — Ron Linthoudt">
+<meta property="og:title" content="Lijsten testen · Ron Linthoudt">
 <meta property="og:description" content="Probeer online welke lijst bij een schilderij van Ron Linthoudt past: kies een werk, een lijstprofiel, de lijstbreedte en de wandkleur.">
 <meta property="og:url" content="https://linthoudt.nl/lijsten.html">
 <meta property="og:image" content="https://linthoudt.nl/img/schilderijen/2023-citroenen.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#4E7350">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/stijl.css?v=3">
+<link rel="stylesheet" href="assets/css/stijl.css?v=6">
 </head>
 <body>
 <header class="kop">
@@ -29,6 +29,7 @@
     <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="hoofdmenu">&#9776;</button>
     <nav class="menu" id="hoofdmenu" aria-label="Hoofdmenu">
       <a href="werk.html">Werk</a>
+      <a href="lijsten.html" aria-current="page">Lijsten testen</a>
       <a href="over.html">Over Ron</a>
       <a href="exposities.html">Exposities</a>
       <a class="knop-nav" href="contact.html">Atelierbezoek</a>
@@ -42,7 +43,7 @@
     <div class="wrap">
       <p class="eyebrow licht">Lijsten testen</p>
       <h1>Welke lijst past bij dit werk?</h1>
-      <p>Kies een schilderij, probeer een lijst en zie het direct aan de wand. Wat u hier samenstelt kunt u meesturen bij een atelierbezoek — de lijst wordt op maat gemaakt.</p>
+      <p>Kies een schilderij, probeer een lijst en zie het direct aan de wand. Wat u hier samenstelt kunt u meesturen bij een atelierbezoek. De lijst wordt op maat gemaakt.</p>
     </div>
   </div>
 
@@ -53,11 +54,19 @@
         <div class="tester-wand" id="tester-wand">
           <div class="tester-plint"></div>
           <div class="tester-plintlat"></div>
-          <div class="tester-toneel">
-            <span class="tester-lijst" id="tester-lijst">
-              <span class="tester-doek" id="tester-doek" role="img"></span>
-            </span>
-          </div>
+          <svg class="tester-bank" id="tester-bank" viewBox="0 0 220 92" aria-hidden="true">
+            <ellipse cx="110" cy="88" rx="104" ry="4" fill="rgba(46,68,48,.16)"/>
+            <rect x="30" y="72" width="9" height="15" rx="2" fill="#7C6448"/>
+            <rect x="181" y="72" width="9" height="15" rx="2" fill="#7C6448"/>
+            <rect x="12" y="4" width="196" height="52" rx="11" fill="#CDBE9D"/>
+            <rect x="22" y="44" width="87" height="26" rx="7" fill="#DACBA9"/>
+            <rect x="111" y="44" width="87" height="26" rx="7" fill="#DACBA9"/>
+            <rect x="0" y="24" width="26" height="50" rx="10" fill="#C0B08E"/>
+            <rect x="194" y="24" width="26" height="50" rx="10" fill="#C0B08E"/>
+          </svg>
+          <span class="tester-lijst" id="tester-lijst">
+            <img class="tester-doek" id="tester-doek" alt="">
+          </span>
         </div>
         <div class="tester-onder">
           <div>
@@ -86,7 +95,7 @@
             <label class="tester-label" for="tester-schuif" style="margin:0">lijstbreedte</label>
             <output id="tester-breedte" for="tester-schuif"></output>
           </div>
-          <input type="range" id="tester-schuif" min="2" max="14" step="1" value="6">
+          <input type="range" id="tester-schuif" min="1" max="10" step="1" value="4">
         </div>
 
         <div class="tester-blok">
@@ -95,7 +104,7 @@
         </div>
 
         <div class="tester-voorleggen">
-          <p>Deze weergave is ter illustratie: kleuren op een scherm wijken af van het echte profiel. Welke lijst het werk het beste doet, bekijkt u in het atelier.</p>
+          <p>Het schilderij hangt hier op ware grootte boven een bank van 2,20 meter. Toch blijft dit een illustratie: kleuren op een scherm wijken af van het echte profiel. Welke lijst het werk het beste doet, bekijkt u in het atelier.</p>
           <a class="knop vol" id="tester-cta" href="contact.html">Deze combinatie voorleggen</a>
         </div>
       </div>
@@ -132,14 +141,14 @@
       </div>
     </div>
     <p class="onderaan">
-      <span>© 2026 Ron Linthoudt — alle afbeeldingen auteursrechtelijk beschermd</span>
+      <span>© 2026 Ron Linthoudt · alle afbeeldingen auteursrechtelijk beschermd</span>
       <span>Nederland</span>
     </p>
   </div>
 </footer>
 
 <script src="data/schilderijen.js?v=2"></script>
-<script src="assets/js/site.js?v=2"></script>
-<script src="assets/js/lijsten.js?v=1"></script>
+<script src="assets/js/site.js?v=4"></script>
+<script src="assets/js/lijsten.js?v=5"></script>
 </body>
 </html>
