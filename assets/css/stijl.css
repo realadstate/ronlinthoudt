@@ -128,22 +128,53 @@ p{margin:0 0 18px}
 .paginakop h1{color:var(--cream);margin:14px 0 18px}
 .paginakop p:not(.eyebrow){color:var(--green-light);max-width:56ch;margin:0}
 
-/* ---------- Hero ---------- */
-.hero{background:var(--beige);padding:0 0 76px}
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:center;
-  max-width:1560px;margin:0 auto;padding-right:var(--pad)}
-.hero-beeld{position:relative;padding:0 0 0 0}
-.hero-beeld img{width:100%;height:auto;border-radius:0 var(--radius) var(--radius) 0;
-  box-shadow:var(--schaduw)}
-.hero-bijschrift{display:flex;align-items:center;gap:12px;margin:18px 0 0 var(--pad);
-  font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
-.hero-bijschrift::before{content:"";width:26px;height:2px;background:var(--ochre);flex:none}
-.hero-paneel{background:var(--moss);color:var(--cream);border-radius:var(--radius);
-  padding:46px 44px;margin:0 var(--pad) 0 -60px;box-shadow:var(--schaduw);position:relative;z-index:2}
-.hero-paneel .eyebrow{letter-spacing:.16em}
-.hero-paneel h1{color:var(--cream);margin:16px 0 20px}
-.hero-paneel p:not(.eyebrow){color:var(--green-light);max-width:40ch}
-.hero-acties{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+/* ---------- Hero (scrollverhaal op de homepagina) ----------
+   Zes schilderijen liggen gestapeld in het midden; al scrollend waaieren ze
+   uit (--s), verschijnt het logo (--l) en schuift de navigatie in beeld
+   (--nav). De variabelen worden door assets/js/heroscroll.js op <html> gezet;
+   de fallback-waarde 1 betekent: zonder JavaScript of met 'minder beweging'
+   staat alles meteen in de eindstand. */
+.kop-vast{position:fixed;top:0;left:0;right:0;
+  transform:translateY(calc(-110% + var(--nav,1)*110%));opacity:var(--nav,1);
+  will-change:transform,opacity}
+.kop-vast.uit{visibility:hidden}
+.hero-baan{position:relative;height:400vh;height:400svh}
+.hero-plak{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--cream)}
+.hero-stapel{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.hero-kaart{position:absolute;width:min(34vw,420px);aspect-ratio:4/5;border-radius:var(--radius);
+  overflow:hidden;box-shadow:0 22px 44px -20px rgba(46,68,48,.5);will-change:transform}
+.hero-kaart img{width:100%;height:100%;object-fit:cover}
+.hero-kaart:nth-child(1){z-index:6;transform:translate3d(calc(-44vw*var(--s,1)),calc(-22vh*var(--s,1)),0) rotate(calc(-8deg*var(--s,1))) scale(calc(1 - .52*var(--s,1)))}
+.hero-kaart:nth-child(2){z-index:5;transform:translate3d(calc(44vw*var(--s,1)),calc(-26vh*var(--s,1)),0) rotate(calc(7deg*var(--s,1))) scale(calc(1 - .55*var(--s,1)))}
+.hero-kaart:nth-child(3){z-index:4;transform:translate3d(calc(-52vw*var(--s,1)),calc(20vh*var(--s,1)),0) rotate(calc(6deg*var(--s,1))) scale(calc(1 - .48*var(--s,1)))}
+.hero-kaart:nth-child(4){z-index:3;transform:translate3d(calc(52vw*var(--s,1)),calc(24vh*var(--s,1)),0) rotate(calc(-7deg*var(--s,1))) scale(calc(1 - .5*var(--s,1)))}
+.hero-kaart:nth-child(5){z-index:2;transform:translate3d(calc(-18vw*var(--s,1)),calc(46vh*var(--s,1)),0) rotate(calc(-4deg*var(--s,1))) scale(calc(1 - .58*var(--s,1)))}
+.hero-kaart:nth-child(6){z-index:1;transform:translate3d(calc(20vw*var(--s,1)),calc(48vh*var(--s,1)),0) rotate(calc(5deg*var(--s,1))) scale(calc(1 - .6*var(--s,1)))}
+.hero-midden{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:24px;text-align:center;
+  opacity:var(--l,1);transform:scale(calc(.94 + .06*var(--l,1)))}
+.hero-midden.uit{visibility:hidden}
+.hero-logo{margin:0;line-height:1;letter-spacing:normal}
+.hero-logo .voor{display:block;font-size:clamp(14px,2vw,22px);font-weight:300;letter-spacing:.34em;
+  margin-right:-.34em;text-transform:lowercase;color:var(--ink-muted);margin-bottom:12px}
+.hero-logo .achter{display:block;font-size:clamp(42px,8.5vw,96px);font-weight:200;letter-spacing:.20em;
+  margin-right:-.2em;text-transform:lowercase;color:var(--ink);white-space:nowrap;line-height:1.1}
+.hero-onderschrift{display:flex;align-items:center;gap:12px;margin:0;
+  font-size:12px;font-weight:300;letter-spacing:.30em;text-transform:uppercase;color:var(--ink-soft)}
+.hero-onderschrift::before,.hero-onderschrift::after{content:"";width:18px;height:2px;
+  background:var(--ochre);flex:none}
+.hero-actie{margin-top:16px}
+.hero-scrollhint{position:absolute;left:0;right:0;bottom:32px;z-index:11;display:flex;
+  justify-content:center;opacity:calc(1 - var(--l,1))}
+.hero-scrollhint span{font-size:11px;font-weight:300;letter-spacing:.30em;
+  text-transform:uppercase;color:var(--ink-muted)}
+html:not(.js) .hero-baan{height:auto}
+html:not(.js) .hero-plak{position:relative}
+html:not(.js) .hero-scrollhint{display:none}
+.hero-vervolg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  gap:64px;align-items:end}
+.hero-vervolg .kolom{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.hero-vervolg p{margin:0;max-width:32em}
 
 /* ---------- Galerie ---------- */
 .filters{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:30px;
@@ -285,11 +316,8 @@ form .knop{width:100%;text-align:center}
 }
 @media(max-width:900px){
   :root{--pad:24px}
-  .hero{padding-top:0}
-  .hero-grid,.twee-koloms,.contact-grid,.detail-binnen{grid-template-columns:1fr;gap:0}
-  .hero-beeld img{border-radius:0}
-  .hero-bijschrift{margin-left:var(--pad)}
-  .hero-paneel{margin:-40px var(--pad) 0;padding:34px 28px}
+  .twee-koloms,.contact-grid,.detail-binnen{grid-template-columns:1fr;gap:0}
+  .hero-vervolg{grid-template-columns:1fr;gap:30px}
   .twee-koloms,.contact-grid{gap:38px}
   .galerie,.galerie.vijf{grid-template-columns:repeat(2,1fr);gap:28px 18px}
   .hamburger{display:block}
@@ -304,6 +332,9 @@ form .knop{width:100%;text-align:center}
   .detail .blader{display:none}
   .sectie{padding:58px 0}
 }
+@media(max-width:700px){
+  .hero-kaart{width:min(58vw,420px)}
+}
 @media(max-width:560px){
   .galerie,.galerie.vijf{grid-template-columns:1fr}
   .rij{grid-template-columns:1fr}
@@ -313,4 +344,8 @@ form .knop{width:100%;text-align:center}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
+  /* Hero zonder scrollanimatie: één scherm, meteen de eindstand */
+  .hero-baan{height:auto}
+  .hero-plak{position:relative}
+  .hero-scrollhint{display:none}
 }

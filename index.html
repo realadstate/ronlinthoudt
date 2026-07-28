@@ -17,13 +17,14 @@
 <meta name="theme-color" content="#4E7350">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/stijl.css?v=2">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/stijl.css?v=3">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Ron Linthoudt","jobTitle":"Kunstschilder","birthPlace":"Haarlem","url":"https://linthoudt.nl/","email":"ron@linthoudt.nl","description":"Autodidactisch kunstschilder, realistisch werk in olieverf: stillevens en landschappen.","knowsAbout":["olieverfschilderen","stilleven","landschapsschilderkunst"]}
 </script>
 </head>
 <body>
-<header class="kop">
+<header class="kop kop-vast">
   <div class="kop-balk">
     <a class="logo" href="index.html">
       <span class="voor">ron</span>
@@ -41,24 +42,58 @@
 
 <main>
 
-  <div class="hero">
-    <div class="hero-grid">
-      <div class="hero-beeld">
-        <img src="img/ron-atelier.webp" alt="Ron Linthoudt aan het werk in zijn atelier"
-             width="1198" height="1196" fetchpriority="high" decoding="async">
-        <p class="hero-bijschrift">Atelier aan huis · op afspraak</p>
-      </div>
-      <div class="hero-paneel">
-        <p class="eyebrow licht">Haarlem, 1962 · Realistisch werk in olieverf</p>
-        <h1>Het stille leven van alledaagse dingen</h1>
-        <p>Stillevens en landschappen, geschilderd in olieverf in het atelier aan huis. Te bezichtigen en te koop — uitsluitend op afspraak.</p>
-        <div class="hero-acties">
-          <a class="knop licht" href="werk.html">Bekijk het werk</a>
-          <a class="knop omlijnd-licht" href="contact.html">Maak een afspraak</a>
+  <div class="hero-baan">
+    <div class="hero-plak">
+      <div class="hero-stapel">
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2023-citroenen.webp" alt="Citroenen, olieverf op doek, 2023"
+               width="794" height="800" fetchpriority="high" decoding="async">
+        </div>
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2021-kreeft.webp" alt="Kreeft, olieverf op paneel, 2021"
+               width="800" height="635" decoding="async">
+        </div>
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2020-aardbeien.webp" alt="Aardbeien, olieverf op doek, 2020"
+               width="800" height="527" decoding="async">
+        </div>
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2022-octo.webp" alt="Octo, olieverf op doek, 2022"
+               width="800" height="800" decoding="async">
+        </div>
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2020-kraan.webp" alt="Kraan, olieverf op doek, 2020"
+               width="800" height="800" decoding="async">
+        </div>
+        <div class="hero-kaart">
+          <img src="img/schilderijen/klein/2023-de-prins.webp" alt="De Prins, olieverf op doek, 2023"
+               width="800" height="800" decoding="async">
         </div>
       </div>
+      <div class="hero-midden">
+        <h1 class="hero-logo">
+          <span class="voor">ron</span>
+          <span class="achter">linthoudt</span>
+          <span class="visueel-verborgen"> — kunstschilder, realistisch werk in olieverf</span>
+        </h1>
+        <p class="hero-onderschrift"><span>kunstschilder olieverf</span></p>
+        <div class="hero-actie">
+          <a class="knop vol" href="werk.html">Bekijk werk</a>
+        </div>
+      </div>
+      <div class="hero-scrollhint" aria-hidden="true"><span>scroll</span></div>
     </div>
   </div>
+
+  <section class="sectie groen">
+    <div class="wrap hero-vervolg">
+      <h2>Zes van de eenenzeventig</h2>
+      <div class="kolom">
+        <p>Stillevens en landschappen in olieverf, geschilderd in het atelier aan huis in Haarlem. Werk is te bezichtigen en te koop — uitsluitend op afspraak.</p>
+        <a class="knop omlijnd-licht" href="werk.html">Alle schilderijen</a>
+      </div>
+    </div>
+  </section>
 
   <section class="sectie">
     <div class="wrap">
@@ -143,5 +178,6 @@
 
 <script src="data/schilderijen.js?v=2"></script>
 <script src="assets/js/site.js?v=2"></script>
+<script src="assets/js/heroscroll.js?v=1"></script>
 </body>
 </html>
