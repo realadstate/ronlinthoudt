@@ -10,24 +10,22 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Ron Linthoudt">
 <meta property="og:title" content="Contact en atelierbezoek — Ron Linthoudt">
-<meta property="og:description" content="Bezichtiging en verkoop uitsluitend op afspraak.">
+<meta property="og:description" content="Interesse in een schilderij of het atelier bezoeken? Stuur een bericht — Ron Linthoudt neemt persoonlijk contact op om een moment af te spreken. Verkoop uitsluitend op afspraak.">
 <meta property="og:url" content="https://linthoudt.nl/contact.html">
-<meta property="og:image" content="https://linthoudt.nl/img/schilderijen/2011-stilleven-met-haring.webp">
+<meta property="og:image" content="https://linthoudt.nl/img/ron-atelier.webp">
+<meta name="theme-color" content="#4E7350">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/stijl.css">
 </head>
 <body>
-
 <header class="kop">
   <div class="kop-balk">
     <a class="logo" href="index.html">
-      <span class="naam">Ron Linthoudt</span>
-      <span class="onder">Kunstschilder · Olieverf</span>
+      <span class="voor">ron</span>
+      <span class="achter">linthoudt</span>
     </a>
-    <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="hoofdmenu">☰</button>
+    <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="hoofdmenu">&#9776;</button>
     <nav class="menu" id="hoofdmenu" aria-label="Hoofdmenu">
       <a href="werk.html">Werk</a>
       <a href="over.html">Over Ron</a>
@@ -41,39 +39,34 @@
 
   <div class="paginakop">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
+      <p class="eyebrow licht">Atelierbezoek</p>
       <h1>Bezichtiging op afspraak</h1>
+      <p>Interesse in een schilderij, of wilt u het werk in het echt zien? Stuur een bericht en Ron neemt persoonlijk contact met u op om een moment in het atelier af te spreken.</p>
     </div>
   </div>
 
   <section class="sectie">
     <div class="wrap contact-grid">
-
       <div>
-        <p class="lood">Interesse in een schilderij, of wilt u het werk in het echt zien? Stuur een bericht en Ron neemt persoonlijk contact met u op om een moment in het atelier af te spreken.</p>
-
         <div class="blokje">
-          <b>Geen webshop</b>
+          <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18l-1.5 12.5a2 2 0 01-2 1.5H6.5a2 2 0 01-2-1.5L3 6z"/><path d="M8 6V4.5a4 4 0 018 0V6"/></svg> Geen webshop</b>
           <p>Schilderijen worden niet online verkocht. Elk werk wordt eerst in het atelier bekeken; over prijs, lijst en levering maakt u samen afspraken.</p>
         </div>
-
-        <div class="blokje olijf">
-          <b>Atelier aan huis</b>
+        <div class="blokje groen">
+          <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Atelier aan huis</b>
           <p>Het adres wordt gedeeld bij het maken van de afspraak.</p>
         </div>
-
-        <div class="blokje" style="border-color:var(--lijn)">
-          <b>Liever direct mailen?</b>
-          <p><a href="mailto:ron@linthoudt.nl" style="color:var(--terra)">ron@linthoudt.nl</a></p>
+        <div class="blokje rand">
+          <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg> Liever direct mailen?</b>
+          <p><a href="mailto:ron@linthoudt.nl">ron@linthoudt.nl</a></p>
         </div>
       </div>
 
       <!--
         FORMULIER — instellen in 3 minuten:
-        1. Ga naar https://web3forms.com , vul het e-mailadres van Ron in
+        1. Ga naar https://web3forms.com en vul ron@linthoudt.nl in
         2. Je krijgt een 'access key' per mail
         3. Vervang hieronder ZET-HIER-JE-ACCESS-KEY door die sleutel
-        Dat is alles. Berichten komen dan rechtstreeks in de mailbox.
       -->
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="ZET-HIER-JE-ACCESS-KEY">
@@ -83,48 +76,21 @@
         <input type="checkbox" name="botcheck" class="visueel-verborgen" style="display:none" tabindex="-1" aria-hidden="true">
 
         <div class="rij">
-          <div>
-            <label for="naam">Naam</label>
-            <input id="naam" name="naam" required autocomplete="name" placeholder="Uw naam">
-          </div>
-          <div>
-            <label for="email">E-mailadres</label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="naam@voorbeeld.nl">
-          </div>
+          <div><label for="naam">Naam</label><input id="naam" name="naam" required autocomplete="name" placeholder="Uw naam"></div>
+          <div><label for="email">E-mailadres</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="naam@voorbeeld.nl"></div>
         </div>
-
         <div class="rij">
-          <div>
-            <label for="telefoon">Telefoon <span class="opt">(optioneel)</span></label>
-            <input id="telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder="06 – ">
-          </div>
-          <div>
-            <label for="onderwerp">Onderwerp</label>
-            <select id="onderwerp" name="onderwerp" class="veld">
-              <option>Afspraak in het atelier</option>
-              <option>Vraag over een schilderij</option>
-              <option>Expositie of opdracht</option>
-              <option>Anders</option>
-            </select>
-          </div>
+          <div><label for="telefoon">Telefoon <span class="opt">(optioneel)</span></label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder="06 – "></div>
+          <div><label for="onderwerp">Onderwerp</label><select id="onderwerp" name="onderwerp" class="veld">
+            <option>Afspraak in het atelier</option><option>Vraag over een schilderij</option>
+            <option>Expositie of opdracht</option><option>Anders</option></select></div>
         </div>
-
-        <div>
-          <label for="werk">Om welk schilderij gaat het? <span class="opt">(optioneel)</span></label>
-          <select id="werk" name="werk" class="veld">
-            <option value="">— geen specifiek werk —</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="bericht">Bericht</label>
-          <textarea id="bericht" name="bericht" required placeholder="Waar kan Ron u mee helpen?"></textarea>
-        </div>
-
+        <div><label for="werk">Om welk schilderij gaat het? <span class="opt">(optioneel)</span></label>
+          <select id="werk" name="werk" class="veld"><option value="">— geen specifiek werk —</option></select></div>
+        <div><label for="bericht">Bericht</label><textarea id="bericht" name="bericht" required placeholder="Waar kan Ron u mee helpen?"></textarea></div>
         <button class="knop vol" type="submit">Verstuur bericht</button>
-        <p class="fijn">Uw gegevens worden alleen gebruikt om te reageren op dit bericht en niet met derden gedeeld. Zie de <a href="privacy.html" style="color:var(--terra)">privacyverklaring</a>.</p>
+        <p class="fijn">Uw gegevens worden alleen gebruikt om te reageren op dit bericht en niet met derden gedeeld. Zie de <a href="privacy.html">privacyverklaring</a>.</p>
       </form>
-
     </div>
   </section>
 
@@ -134,8 +100,12 @@
   <div class="wrap">
     <div class="voet-kolommen">
       <div>
-        <p class="naam">Ron Linthoudt</p>
-        <p class="zacht">Kunstschilder · realistisch werk in olieverf · atelier aan huis · bezichtiging op afspraak.</p>
+        <span class="logo">
+          <span class="voor">ron</span>
+          <span class="achter">linthoudt</span>
+        </span>
+        <span class="onder">Kunstschilder · Olieverf</span>
+        <p class="zacht">Realistisch werk in olieverf · atelier aan huis · bezichtiging op afspraak.</p>
       </div>
       <div>
         <h2>Navigatie</h2>
@@ -153,7 +123,7 @@
     </div>
     <p class="onderaan">
       <span>© 2026 Ron Linthoudt — alle afbeeldingen auteursrechtelijk beschermd</span>
-      <span>Haarlem, Nederland</span>
+      <span>Nederland</span>
     </p>
   </div>
 </footer>

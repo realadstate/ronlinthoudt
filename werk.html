@@ -10,25 +10,23 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Ron Linthoudt">
 <meta property="og:title" content="Schilderijen — Ron Linthoudt">
-<meta property="og:description" content="Stillevens en landschappen in olieverf, van 2007 tot nu.">
+<meta property="og:description" content="Overzicht van 71 schilderijen van Ron Linthoudt: stillevens, landschappen en overig werk in olieverf, van 2007 tot nu. Met afmetingen, techniek, prijs en beschikbaarheid.">
 <meta property="og:url" content="https://linthoudt.nl/werk.html">
 <meta property="og:image" content="https://linthoudt.nl/img/schilderijen/2016-corona.webp">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4E7350">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/stijl.css">
 </head>
 <body>
-
 <header class="kop">
   <div class="kop-balk">
     <a class="logo" href="index.html">
-      <span class="naam">Ron Linthoudt</span>
-      <span class="onder">Kunstschilder · Olieverf</span>
+      <span class="voor">ron</span>
+      <span class="achter">linthoudt</span>
     </a>
-    <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="hoofdmenu">☰</button>
+    <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="hoofdmenu">&#9776;</button>
     <nav class="menu" id="hoofdmenu" aria-label="Hoofdmenu">
       <a href="werk.html" aria-current="page">Werk</a>
       <a href="over.html">Over Ron</a>
@@ -42,16 +40,16 @@
 
   <div class="paginakop">
     <div class="wrap">
-      <p class="eyebrow">Galerie</p>
+      <p class="eyebrow licht">Galerie · 2007 tot nu</p>
       <h1>Schilderijen</h1>
-      <p class="lood">Alles wat er is, van 2007 tot nu. Klik op een werk voor de afmetingen, techniek en prijs. Een schilderij kopen gaat altijd via een bezoek aan het atelier — er is geen webshop.</p>
+      <p>Alles wat er is. Bij elk werk staan techniek, maat en prijs. Een schilderij kopen gaat altijd via een bezoek aan het atelier — er is geen webshop.</p>
     </div>
   </div>
 
   <section class="sectie">
     <div class="wrap">
-
       <div class="filters">
+        <span class="label">Categorie</span>
         <div class="filtergroep" id="categorieen" role="group" aria-label="Filter op categorie">
           <button type="button" data-categorie="Alles" aria-pressed="true">Alles</button>
           <button type="button" data-categorie="Stilleven" aria-pressed="false">Stilleven</button>
@@ -62,23 +60,19 @@
           <button type="button" id="te-koop" aria-pressed="false">Alleen te koop</button>
         </div>
         <label for="jaar" class="visueel-verborgen">Filter op jaar</label>
-        <select id="jaar">
-          <option value="alle">Alle jaren</option>
-        </select>
-        <button type="button" class="wis" id="wis">Filters wissen</button>
-        <span class="klein" id="teller" style="margin-left:auto" aria-live="polite"></span>
+        <select id="jaar"><option value="alle">Alle jaren</option></select>
+        <button type="button" class="wis" id="wis">Wissen</button>
+        <span class="teller" id="teller" aria-live="polite"></span>
       </div>
-
-      <ul class="galerie" id="galerie"></ul>
-
+      <ul class="galerie vijf" id="galerie"></ul>
     </div>
   </section>
 
-  <section class="sectie linnen">
-    <div class="wrap" style="text-align:center;max-width:620px">
+  <section class="sectie beige">
+    <div class="wrap" style="max-width:620px">
       <p class="eyebrow">Interesse?</p>
       <h2 style="margin:10px 0 18px">Zien is geloven</h2>
-      <p class="lood" style="margin:0 auto 28px">Staat er iets tussen dat u aanspreekt? Maak een afspraak om het in het atelier te bekijken. Zonder verplichtingen.</p>
+      <p class="lood" style="margin-bottom:28px">Staat er iets tussen dat u aanspreekt? Maak een afspraak om het in het atelier te bekijken. Zonder verplichtingen.</p>
       <a class="knop vol" href="contact.html">Afspraak aanvragen</a>
     </div>
   </section>
@@ -89,8 +83,12 @@
   <div class="wrap">
     <div class="voet-kolommen">
       <div>
-        <p class="naam">Ron Linthoudt</p>
-        <p class="zacht">Kunstschilder · realistisch werk in olieverf · atelier aan huis · bezichtiging op afspraak.</p>
+        <span class="logo">
+          <span class="voor">ron</span>
+          <span class="achter">linthoudt</span>
+        </span>
+        <span class="onder">Kunstschilder · Olieverf</span>
+        <p class="zacht">Realistisch werk in olieverf · atelier aan huis · bezichtiging op afspraak.</p>
       </div>
       <div>
         <h2>Navigatie</h2>
@@ -108,7 +106,7 @@
     </div>
     <p class="onderaan">
       <span>© 2026 Ron Linthoudt — alle afbeeldingen auteursrechtelijk beschermd</span>
-      <span>Haarlem, Nederland</span>
+      <span>Nederland</span>
     </p>
   </div>
 </footer>

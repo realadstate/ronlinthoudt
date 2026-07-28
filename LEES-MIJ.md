@@ -25,7 +25,11 @@ img/schilderijen/klein/   dezelfde foto's, kleiner (voor de galerie)
 
 assets/css/stijl.css  alle kleuren, letters en vormgeving
 assets/js/site.js     de filters en de detailweergave
+assets/fonts/         de lettertypen Jost en Spectral (staan op de site zelf)
 assets/favicon.svg    het icoontje in de browsertab
+
+img/ron-atelier.webp  foto van Ron in het atelier (homepagina)
+img/ron-portret.webp  foto van Ron aan het werk (over-pagina)
 
 sitemap.xml           voor Google
 robots.txt            voor Google
@@ -139,7 +143,18 @@ Alle teksten staan gewoon in de HTML-bestanden. Open het bestand in een tekstedi
 
 ## Kleuren of lettertype aanpassen
 
-Alles staat bovenaan in `assets/css/stijl.css`, in het blok dat begint met `:root{`. Verander bijvoorbeeld `--terra:#9A4A2E;` in een andere kleurcode en de accentkleur van de hele site wijzigt mee.
+Alles staat bovenaan in `assets/css/stijl.css`, in het blok dat begint met `:root{`. De huisstijl komt uit het design system in Claude Design:
+
+| Naam | Kleur | Waar |
+|---|---|---|
+| `--moss` | `#4E7350` | groen: knoppen, banden, voettekst |
+| `--moss-deep` | `#2E4430` | donkerder groen bij hover |
+| `--beige` | `#E7DCC6` | vlakken en kaarten |
+| `--cream` | `#F5F2E6` | achtergrond van elke pagina |
+| `--ochre` | `#C79242` | accent: streepjes, jaartallen |
+| `--ink` | `#33312C` | tekst |
+
+Verander één waarde en de hele site volgt. Lettertypen zijn **Jost** (alles) en **Spectral** (citaten); die staan in `assets/fonts/` op de site zelf, dus er wordt geen verbinding met Google gemaakt.
 
 ---
 
@@ -158,25 +173,16 @@ Omdat alles in Git staat, is niets definitief. Ging er iets mis?
 
 ---
 
-## Portretfoto toevoegen
+## Foto's van Ron vervangen
 
-Op `index.html` en `over.html` staat nu een leeg vak met de tekst "Hier komt een portretfoto van Ron in het atelier". Zet de foto als `img/ron-linthoudt.webp` neer en vervang dat blok:
+Er staan twee foto's van Ron op de site:
 
-```html
-<div class="portret">
-  <span style="font-size:30px;line-height:1" aria-hidden="true">◻</span>
-  <span>Hier komt een portretfoto van Ron in het atelier</span>
-</div>
-```
+| Bestand | Waar | Verhouding |
+|---|---|---|
+| `img/ron-atelier.webp` | grote foto op de homepagina | vierkant werkt het best |
+| `img/ron-portret.webp` | op de over-pagina | staand, ongeveer 4:5 |
 
-door:
-
-```html
-<img src="img/ron-linthoudt.webp" alt="Ron Linthoudt in zijn atelier"
-     style="border:1px solid var(--lijn);width:100%">
-```
-
-Op `over.html` is het pad hetzelfde.
+Wil je een andere foto? Zet hem om naar WebP (lange zijde ±1400 px) en overschrijf het bestand met dezelfde naam. Dan hoef je verder niets aan te passen.
 
 ---
 

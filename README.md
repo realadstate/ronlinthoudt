@@ -3,6 +3,10 @@
 Statische website voor kunstschilder Ron Linthoudt. Geen build-stap, geen dependencies:
 gewoon HTML, CSS en een beetje JavaScript.
 
+De vormgeving komt uit het design system **Ron Linthoudt** in Claude Design:
+mosgroen, beige en crème, met Jost en Spectral als lettertypen. Die staan
+lokaal in `assets/fonts/`, dus de site laadt zonder externe verbindingen.
+
 **Live:** https://linthoudt.nl
 **Hosting:** Cloudflare Pages (automatische deploy bij elke push naar `main`)
 
@@ -14,6 +18,7 @@ gewoon HTML, CSS en een beetje JavaScript.
 | Foto's | `img/schilderijen/` (groot) en `img/schilderijen/klein/` |
 | Teksten | de losse `.html`-bestanden |
 | Kleuren en lettertypen | bovenin `assets/css/stijl.css` |
+| Foto's van Ron | `img/ron-atelier.webp` en `img/ron-portret.webp` |
 
 Uitgebreide uitleg staat in **[LEES-MIJ.md](LEES-MIJ.md)**.
 

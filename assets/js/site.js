@@ -58,8 +58,8 @@
   /* ---------- Uitgelicht werk op de homepagina ---------- */
   var uitgelicht = document.getElementById('uitgelicht');
   if (uitgelicht && werken.length) {
-    var beste = werken.filter(function (w) { return w.status === 'te koop'; }).slice(0, 6);
-    if (beste.length < 6) beste = werken.slice(0, 6);
+    var beste = werken.filter(function (w) { return w.status === 'te koop'; }).slice(0, 5);
+    if (beste.length < 5) beste = werken.slice(0, 5);
     uitgelicht.innerHTML = beste.map(function (w) {
       return kaart(w, werken.indexOf(w));
     }).join('');
@@ -99,8 +99,8 @@
           : zichtbaar.length + ' van ' + werken.length + ' werken';
       }
       if (!zichtbaar.length) {
-        galerie.innerHTML = '<li class="leeg-melding">Geen schilderijen gevonden met deze combinatie. ' +
-          '<button type="button" class="wis" id="wis-leeg">Alle filters wissen</button></li>';
+        galerie.innerHTML = '<li class="leeg-melding">Geen schilderijen gevonden met deze combinatie.<br>' +
+          '<button type="button" class="wis" id="wis-leeg" style="margin-top:10px">Alle filters wissen</button></li>';
         var wisLeeg = document.getElementById('wis-leeg');
         if (wisLeeg) wisLeeg.addEventListener('click', wisAlles);
         return;

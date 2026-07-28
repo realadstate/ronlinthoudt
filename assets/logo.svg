@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 74" role="img" aria-label="Ron Linthoudt, kunstschilder">
-  <text x="210" y="32" text-anchor="middle" fill="#211D19"
-        font-family="'Cormorant Garamond', Georgia, serif" font-size="32" letter-spacing="6.6">RON LINTHOUDT</text>
-  <line x1="52" y1="46" x2="368" y2="46" stroke="#DED5C7" stroke-width="1"/>
-  <text x="210" y="63" text-anchor="middle" fill="#6F655B"
-        font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" letter-spacing="4.4">KUNSTSCHILDER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Ron Linthoudt, kunstschilder">
+  <text x="10" y="24" fill="#8A8378" font-family="Jost, Helvetica, Arial, sans-serif"
+        font-size="11" font-weight="300" letter-spacing="3.7">ron</text>
+  <text x="10" y="56" fill="#33312C" font-family="Jost, Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="200" letter-spacing="6">linthoudt</text>
 </svg>
