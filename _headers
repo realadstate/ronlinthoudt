@@ -1,11 +1,24 @@
-# Cloudflare Pages — caching en beveiliging
+# Cloudflare — caching en beveiliging
+
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
 
+# Pagina's, stijl, script en data: browser moet altijd even navragen.
+# Dat is snel (Cloudflare antwoordt met "niet gewijzigd") en voorkomt
+# dat bezoekers een oude versie blijven zien na een update.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Afbeeldingen en lettertypen veranderen alleen als de bestandsnaam verandert.
 /img/*
   Cache-Control: public, max-age=31536000, immutable
-
-/assets/*
-  Cache-Control: public, max-age=604800
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
