@@ -13,6 +13,10 @@
      "status"     "te koop"  of  "verkocht"  of  "niet te koop"
      "categorie"  "Stilleven"  of  "Landschap"  of  "Overig"
      "slug"       de bestandsnaam van de foto ZONDER .webp
+     "foto"       (optioneel) andere bestandsnaam dan de slug. Vervang je een
+                  foto, geef het nieuwe bestand dan een nieuwe naam (bijv.
+                  "2023-citroenen-2") en zet die hier; zo zien bezoekers met
+                  een oude versie in hun browsergeheugen toch de nieuwe foto.
      "w" en "h"   breedte en hoogte van de foto in pixels
 
    Zet de foto zelf als .webp in     img/schilderijen/
@@ -56,7 +60,8 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2023-citroenen",
-  "w": 1092,
+  "foto": "2023-citroenen-2",
+  "w": 1100,
   "h": 1100
  },
  {
@@ -164,8 +169,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2020-aardbeien",
-  "w": 1599,
-  "h": 1054
+  "foto": "2020-aardbeien-2",
+  "w": 1600,
+  "h": 1052
  },
  {
   "titel": "Kraan",
@@ -224,8 +230,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Overig",
   "slug": "2019-haan",
-  "w": 440,
-  "h": 550
+  "foto": "2019-haan-2",
+  "w": 778,
+  "h": 1100
  },
  {
   "titel": "Percolator",
@@ -248,8 +255,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Overig",
   "slug": "2018-de-geergerde-man",
-  "w": 437,
-  "h": 550
+  "foto": "2018-de-geergerde-man-2",
+  "w": 778,
+  "h": 1100
  },
  {
   "titel": "Delfts blauwe tulpenvaas",
@@ -260,8 +268,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2018-delfts-blauwe-tulpenvaas",
-  "w": 551,
-  "h": 550
+  "foto": "2018-delfts-blauwe-tulpenvaas-2",
+  "w": 1100,
+  "h": 1100
  },
  {
   "titel": "Rode ui",
@@ -368,8 +377,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2017-turkse-vaas",
-  "w": 597,
-  "h": 550
+  "foto": "2017-turkse-vaas-2",
+  "w": 1100,
+  "h": 1100
  },
  {
   "titel": "Beugelfles",
@@ -800,8 +810,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Overig",
   "slug": "2009-de-gaap",
-  "w": 478,
-  "h": 550
+  "foto": "2009-de-gaap-2",
+  "w": 1088,
+  "h": 1100
  },
  {
   "titel": "Parq Quell 1",
@@ -824,8 +835,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Overig",
   "slug": "2009-snavelbek",
-  "w": 535,
-  "h": 550
+  "foto": "2009-snavelbek-2",
+  "w": 1087,
+  "h": 1100
  },
  {
   "titel": "De Wellustelling",
@@ -860,8 +872,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Overig",
   "slug": "2007-de-gehangene",
-  "w": 539,
-  "h": 550
+  "foto": "2007-de-gehangene-2",
+  "w": 1038,
+  "h": 1100
  },
  {
   "titel": "Sint Ursin",

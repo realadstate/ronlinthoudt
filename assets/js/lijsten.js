@@ -87,7 +87,7 @@
     b.type = 'button';
     b.setAttribute('aria-label', w.titel + ' (' + w.jaar + ')');
     var s = document.createElement('span');
-    s.style.backgroundImage = 'url("img/schilderijen/klein/' + w.slug + '.webp")';
+    s.style.backgroundImage = 'url("img/schilderijen/klein/' + (w.foto || w.slug) + '.webp")';
     b.appendChild(s);
     b.addEventListener('click', function () { stand.werk = i; teken(); });
     minis.appendChild(b);
@@ -165,7 +165,7 @@
     lijstEl.style.padding = (breedteCm * schaal) + 'px';
     lijstEl.style.backgroundColor = l.kleur || 'transparent';
     lijstEl.classList.toggle('glans', l.glans);
-    doekEl.src = 'img/schilderijen/klein/' + w.slug + '.webp';
+    doekEl.src = 'img/schilderijen/klein/' + (w.foto || w.slug) + '.webp';
     doekEl.alt = w.titel + ', ' + w.techniek + ', ' + w.jaar;
     /* dunne rand waar de lijst over het doek valt; inset-schaduw werkt niet op een img */
     doekEl.style.outline = l.sponning ? '1px solid ' + l.sponning : 'none';

@@ -44,7 +44,7 @@
     return '<li class="werk">' +
       '<button type="button" data-index="' + index + '">' +
         '<span class="lijst">' +
-          '<img src="' + pad + 'img/schilderijen/klein/' + ontsnap(w.slug) + '.webp" ' +
+          '<img src="' + pad + 'img/schilderijen/klein/' + ontsnap(w.foto || w.slug) + '.webp" ' +
             'alt="' + ontsnap(w.titel) + ', ' + ontsnap(w.techniek) + ', ' + ontsnap(w.jaar) + '" ' +
             'width="' + w.w + '" height="' + w.h + '" loading="lazy" decoding="async">' +
         '</span>' +
@@ -203,7 +203,7 @@
     var binnen = detail.querySelector('.detail-binnen');
     var meerdere = huidigeLijst.length > 1;
     binnen.innerHTML =
-      '<img src="img/schilderijen/' + ontsnap(w.slug) + '.webp" ' +
+      '<img src="img/schilderijen/' + ontsnap(w.foto || w.slug) + '.webp" ' +
         'alt="' + ontsnap(w.titel) + ', ' + ontsnap(w.techniek) + ', ' + ontsnap(w.afmetingen) + '">' +
       '<div class="detail-info">' +
         '<h2>' + ontsnap(w.titel) + '</h2>' +
