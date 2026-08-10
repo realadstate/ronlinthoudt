@@ -112,8 +112,10 @@ p{margin:0 0 18px}
 .hamburger{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-sm);
   width:44px;height:44px;font-size:17px;cursor:pointer;color:var(--ink);line-height:1}
 
-/* ---------- Secties ---------- */
-.sectie{padding:80px 0;position:relative}
+/* ---------- Secties ----------
+   De achtergrond is met opzet niet doorzichtig: op de homepagina ligt de
+   scrollende hero eronder, die er anders doorheen zou schijnen. */
+.sectie{padding:80px 0;position:relative;background:var(--cream)}
 .sectie.beige{background:var(--beige)}
 .sectie.groen{background:var(--moss);color:var(--cream)}
 .sectie.groen h2,.sectie.groen h3{color:var(--cream)}
@@ -175,10 +177,13 @@ html:not(.js) .hero-baan{height:auto}
 html:not(.js) .hero-plak{position:relative}
 html:not(.js) .hero-scrollhint{display:none}
 /* ---------- Ateliersectie (homepagina, na de hero) ---------- */
-/* De sectie schuift als een gordijn over de stilgezette hero heen */
+/* De sectie schuift als een gordijn over de stilgezette hero heen. Ze is
+   minstens een schermhoogte hoog, anders piept de hero er onderuit. */
 .atelier{background:var(--beige);padding:0 0 76px;overflow:hidden;
   position:relative;z-index:20;margin-top:-100vh;margin-top:-100svh;
+  min-height:100vh;min-height:100svh;display:flex;align-items:center;
   box-shadow:0 -28px 60px -30px rgba(46,68,48,.35)}
+.atelier-grid{width:100%}
 html:not(.js) .atelier{margin-top:0;box-shadow:none}
 .atelier-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:center;
   max-width:1560px;margin:0 auto;padding-right:var(--pad)}
@@ -357,6 +362,17 @@ form .knop{width:100%;text-align:center}
 .voet .onderaan{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);
   display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
   font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-line)}
+
+/* ---------- Sociale media ---------- */
+.sociaal{display:flex;gap:10px;margin-top:22px}
+.sociaal a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;
+  border:1px solid var(--green-line);border-radius:var(--radius-sm);color:var(--cream);
+  transition:background .2s,border-color .2s,color .2s}
+.sociaal a:hover{background:var(--beige);border-color:var(--beige);color:var(--moss-deep)}
+.sociaal svg{width:19px;height:19px;flex:none}
+/* Op lichte vlakken, zoals in een blokje op de contactpagina */
+.sociaal.donker a{border-color:var(--moss);color:var(--moss)}
+.sociaal.donker a:hover{background:var(--moss);border-color:var(--moss);color:var(--cream)}
 
 /* ---------- Cookiebanner ---------- */
 .cookiebanner{position:fixed;left:24px;bottom:24px;z-index:80;max-width:420px;
