@@ -30,6 +30,9 @@
     if (status === 'verkocht') return 'Verkocht';
     return 'Niet te koop';
   }
+  /* Prijzen worden sinds oktober 2026 niet meer op de site getoond.
+     De bedragen staan nog wel in data/schilderijen.js voor eigen administratie.
+     Wil je ze weer tonen? Zet prijsTekst() terug in kaart() en tekenDetail(). */
   function prijsTekst(prijs) {
     if (!prijs) return '';
     return '€ ' + String(prijs).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -50,8 +53,7 @@
         '</span>' +
         '<h3>' + ontsnap(w.titel) + '</h3>' +
         '<span class="meta">' + ontsnap(w.jaar) + ' · ' + ontsnap(w.afmetingen) + ' · ' + ontsnap(w.techniek) + '</span><br>' +
-        '<span class="vlag ' + vlagKlasse(w.status) + '">' + vlagTekst(w.status) +
-          (w.prijs ? ' · ' + prijsTekst(w.prijs) : '') + '</span>' +
+        '<span class="vlag ' + vlagKlasse(w.status) + '">' + vlagTekst(w.status) + '</span>' +
       '</button></li>';
   }
 
@@ -213,12 +215,9 @@
           '<dt>Techniek</dt><dd>' + ontsnap(w.techniek) + '</dd>' +
           '<dt>Status</dt><dd>' + vlagTekst(w.status) + '</dd>' +
         '</dl>' +
-        (w.prijs
-          ? '<div class="prijs">' + prijsTekst(w.prijs) + '</div>' +
-            '<p class="toelichting">Excl. lijst · bezichtiging en verkoop uitsluitend op afspraak</p>'
-          : (w.status === 'te koop'
-              ? '<p class="toelichting">Prijs op aanvraag.</p>'
-              : '<p class="toelichting">Dit werk is niet beschikbaar. Vergelijkbaar werk in opdracht is bespreekbaar.</p>')) +
+        (w.status === 'te koop'
+          ? '<p class="toelichting">Bezichtiging en verkoop uitsluitend op afspraak. Vraag naar de prijs tijdens het bezoek.</p>'
+          : '<p class="toelichting">Dit werk is niet beschikbaar. Vergelijkbaar werk in opdracht is bespreekbaar.</p>') +
         '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
           '<a class="knop vol" href="contact.html?werk=' + encodeURIComponent(w.titel + ' (' + w.jaar + ')') + '">Afspraak aanvragen</a>' +
           '<a class="knop omlijnd-licht" href="lijsten.html?werk=' + encodeURIComponent(w.slug) + '">Bekijk met lijst</a>' +
