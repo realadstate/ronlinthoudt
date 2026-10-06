@@ -223,16 +223,19 @@ html:not(.js) .atelier{margin-top:0;box-shadow:none}
 .filters .teller{margin-left:auto;font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--ink-muted)}
 
-.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px;list-style:none;margin:0;padding:0}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px;list-style:none;margin:0;padding:0;align-items:start}
 .galerie.vijf{grid-template-columns:repeat(5,1fr);gap:28px 20px}
 .werk{margin:0}
 .werk{display:flex}
 .werk button{cursor:pointer;background:none;border:0;padding:0;text-align:left;
   font:inherit;color:inherit;width:100%;display:flex;flex-direction:column}
+/* Geen vast vierkant: het kader voegt zich naar het schilderij. Het doek vult
+   altijd de kolombreedte, met overal dezelfde passe-partout eromheen. Zo wordt
+   een liggend werk ook liggend getoond, en een staand werk staand. */
 .lijst{background:var(--beige);border-radius:var(--radius);padding:22px;
-  display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;
+  display:block;
   box-shadow:var(--schaduw-zacht);transition:box-shadow .3s,transform .3s;overflow:hidden}
-.lijst img{max-height:100%;width:auto;max-width:100%;border-radius:4px;
+.lijst img{width:100%;height:auto;border-radius:4px;
   box-shadow:0 4px 14px -6px rgba(46,68,48,.4);transition:transform .5s ease}
 .werk button:hover .lijst{box-shadow:var(--schaduw);transform:translateY(-3px)}
 .werk button:hover .lijst img{transform:scale(1.03)}
@@ -250,6 +253,12 @@ html:not(.js) .atelier{margin-top:0;box-shadow:none}
 .twee-koloms{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .foto-kader{border-radius:var(--radius);overflow:hidden;box-shadow:var(--schaduw)}
 .foto-kader img{width:100%;height:auto}
+
+/* Een schilderij midden in een tekstkolom, met bijschrift eronder. */
+.werk-figuur{margin:34px 0 0}
+.werk-figuur figcaption{margin-top:12px;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-muted)}
+.werk-figuur figcaption b{font-weight:500;color:var(--moss-deep);letter-spacing:.14em}
 .citaat{font-family:var(--font-prose);font-size:23px;font-weight:300;line-height:1.5;
   color:var(--moss-deep);margin:0 0 14px}
 .citaat-naam{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.18em;
@@ -275,6 +284,7 @@ html:not(.js) .atelier{margin-top:0;box-shadow:none}
 .blokje{border-radius:var(--radius);padding:24px 26px;margin-bottom:18px;background:var(--beige)}
 .blokje.groen{background:var(--moss);color:var(--cream);box-shadow:var(--schaduw-zacht)}
 .blokje.groen p{color:var(--green-light)}
+.blokje.groen a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .blokje.rand{background:none;border:1px solid var(--line)}
 .blokje b{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:400;margin-bottom:8px}
 .blokje p{margin:0;font-size:14.5px;color:var(--ink-soft)}
@@ -359,6 +369,7 @@ form .knop{width:100%;text-align:center}
   color:var(--green-line);margin:0 0 16px;font-weight:400}
 .voet a{display:block;margin-bottom:10px;color:var(--cream)}
 .voet a:hover{color:#fff;text-decoration:underline}
+.voet .adres{display:block;margin:16px 0 16px;color:var(--green-light);line-height:1.6}
 .voet .onderaan{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);
   display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
   font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-line)}

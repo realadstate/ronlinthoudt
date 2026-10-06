@@ -73,7 +73,7 @@
   var zichtbaar = werken.slice();
 
   if (galerie) {
-    var stand = { categorie: 'Alles', jaar: 'alle', alleenTeKoop: false };
+    var stand = { status: 'Alles', jaar: 'alle' };
 
     var jaarKeuze = document.getElementById('jaar');
     if (jaarKeuze) {
@@ -86,9 +86,8 @@
     }
 
     function past(w) {
-      if (stand.categorie !== 'Alles' && w.categorie !== stand.categorie) return false;
+      if (stand.status !== 'Alles' && w.status !== stand.status) return false;
       if (stand.jaar !== 'alle' && w.jaar !== stand.jaar) return false;
-      if (stand.alleenTeKoop && w.status !== 'te koop') return false;
       return true;
     }
 
@@ -112,33 +111,23 @@
     }
 
     function wisAlles() {
-      stand = { categorie: 'Alles', jaar: 'alle', alleenTeKoop: false };
-      document.querySelectorAll('#categorieen button').forEach(function (b) {
-        b.setAttribute('aria-pressed', b.dataset.categorie === 'Alles' ? 'true' : 'false');
+      stand = { status: 'Alles', jaar: 'alle' };
+      document.querySelectorAll('#statussen button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.dataset.status === 'Alles' ? 'true' : 'false');
       });
-      var tk = document.getElementById('te-koop');
-      if (tk) tk.setAttribute('aria-pressed', 'false');
       if (jaarKeuze) jaarKeuze.value = 'alle';
       tekenGalerie();
     }
 
-    var categorieen = document.getElementById('categorieen');
-    if (categorieen) {
-      categorieen.addEventListener('click', function (e) {
+    var statussen = document.getElementById('statussen');
+    if (statussen) {
+      statussen.addEventListener('click', function (e) {
         var b = e.target.closest('button');
         if (!b) return;
-        stand.categorie = b.dataset.categorie;
-        categorieen.querySelectorAll('button').forEach(function (x) {
+        stand.status = b.dataset.status;
+        statussen.querySelectorAll('button').forEach(function (x) {
           x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
         });
-        tekenGalerie();
-      });
-    }
-    var teKoopKnop = document.getElementById('te-koop');
-    if (teKoopKnop) {
-      teKoopKnop.addEventListener('click', function () {
-        stand.alleenTeKoop = !stand.alleenTeKoop;
-        teKoopKnop.setAttribute('aria-pressed', stand.alleenTeKoop ? 'true' : 'false');
         tekenGalerie();
       });
     }

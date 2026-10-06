@@ -36,8 +36,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2024-gele-en-rode-paprika",
-  "w": 852,
-  "h": 1100
+  "foto": "2024-gele-en-rode-paprika-2",
+  "w": 1303,
+  "h": 1600
  },
  {
   "titel": "Kuifje en de zwarte rotsen",
@@ -73,8 +74,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Overig",
   "slug": "2023-de-prins",
-  "w": 1100,
-  "h": 1100
+  "foto": "2023-de-prins-2",
+  "w": 1600,
+  "h": 1562
  },
  {
   "titel": "Schapenkop",
@@ -121,8 +123,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2022-octo",
-  "w": 1100,
-  "h": 1100
+  "foto": "2022-octo-2",
+  "w": 1600,
+  "h": 1473
  },
  {
   "titel": "Brood",
@@ -133,8 +136,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2021-brood",
-  "w": 1387,
-  "h": 1100
+  "foto": "2021-brood-2",
+  "w": 1600,
+  "h": 1241
  },
  {
   "titel": "Kreeft",
@@ -145,8 +149,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2021-kreeft",
-  "w": 1386,
-  "h": 1100
+  "foto": "2021-kreeft-2",
+  "w": 1600,
+  "h": 1238
  },
  {
   "titel": "Zoetigheid",
@@ -157,8 +162,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2021-zoetigheid",
+  "foto": "2021-zoetigheid-2",
   "w": 1600,
-  "h": 838
+  "h": 825
  },
  {
   "titel": "Aardbeien",
@@ -186,18 +192,6 @@ const SCHILDERIJEN = [
   "h": 1100
  },
  {
-  "titel": "Reebout",
-  "jaar": "2020",
-  "afmetingen": "18 x 13 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": "350",
-  "status": "te koop",
-  "categorie": "Stilleven",
-  "slug": "2020-reebout",
-  "w": 792,
-  "h": 1100
- },
- {
   "titel": "Aardbeien",
   "jaar": "2019",
   "afmetingen": "13 x 18 cm",
@@ -206,8 +200,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2019-aardbeien",
-  "w": 729,
-  "h": 550
+  "foto": "2019-aardbeien-2",
+  "w": 1600,
+  "h": 1118
  },
  {
   "titel": "Bestek",
@@ -218,8 +213,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2019-bestek",
-  "w": 544,
-  "h": 550
+  "foto": "2019-bestek-2",
+  "w": 1600,
+  "h": 1413
  },
  {
   "titel": "Haan",
@@ -230,9 +226,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Overig",
   "slug": "2019-haan",
-  "foto": "2019-haan-2",
-  "w": 778,
-  "h": 1100
+  "foto": "2019-haan-3",
+  "w": 1131,
+  "h": 1600
  },
  {
   "titel": "Percolator",
@@ -243,8 +239,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2019-percolator",
-  "w": 395,
-  "h": 550
+  "foto": "2019-percolator-2",
+  "w": 1308,
+  "h": 1600
  },
  {
   "titel": "De geërgerde man",
@@ -281,32 +278,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2018-rode-ui",
-  "w": 478,
-  "h": 549
- },
- {
-  "titel": "Sleutelgat",
-  "jaar": "2018",
-  "afmetingen": "15 x 10 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "niet te koop",
-  "categorie": "Overig",
-  "slug": "2018-sleutelgat",
-  "w": 364,
-  "h": 550
- },
- {
-  "titel": "Walnoot",
-  "jaar": "2018",
-  "afmetingen": "13 x 18 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "niet te koop",
-  "categorie": "Stilleven",
-  "slug": "2018-walnoot",
-  "w": 772,
-  "h": 550
+  "foto": "2018-rode-ui-2",
+  "w": 1526,
+  "h": 1600
  },
  {
   "titel": "Oliespuit",
@@ -317,8 +291,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2017-oliespuit",
-  "w": 561,
-  "h": 550
+  "foto": "2017-oliespuit-2",
+  "w": 1600,
+  "h": 1570
  },
  {
   "titel": "Percolator",
@@ -329,8 +304,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2017-percolator",
-  "w": 396,
-  "h": 550
+  "foto": "2017-percolator-2",
+  "w": 1296,
+  "h": 1600
  },
  {
   "titel": "Schaakstukken",
@@ -390,8 +366,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2016-beugelfles",
-  "w": 389,
-  "h": 550
+  "foto": "2016-beugelfles-2",
+  "w": 1320,
+  "h": 1600
  },
  {
   "titel": "Corona",
@@ -402,8 +379,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2016-corona",
-  "w": 349,
-  "h": 550
+  "foto": "2016-corona-2",
+  "w": 863,
+  "h": 1600
  },
  {
   "titel": "Olijfolie flessen",
@@ -414,20 +392,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2016-olijfolie-flessen",
-  "w": 390,
-  "h": 549
- },
- {
-  "titel": "Stilleven met een ei",
-  "jaar": "2016",
-  "afmetingen": "10 x 15 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "niet te koop",
-  "categorie": "Stilleven",
-  "slug": "2016-stilleven-met-een-ei",
-  "w": 800,
-  "h": 526
+  "foto": "2016-olijfolie-flessen-2",
+  "w": 1306,
+  "h": 1600
  },
  {
   "titel": "Stilleven met koffiekan",
@@ -442,30 +409,6 @@ const SCHILDERIJEN = [
   "h": 550
  },
  {
-  "titel": "Citroen",
-  "jaar": "2015",
-  "afmetingen": "10 x 15 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "niet te koop",
-  "categorie": "Stilleven",
-  "slug": "2015-citroen",
-  "w": 799,
-  "h": 519
- },
- {
-  "titel": "Loutraki",
-  "jaar": "2015",
-  "afmetingen": "60 x 80 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "995",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2015-loutraki",
-  "w": 740,
-  "h": 550
- },
- {
   "titel": "Stilleven met mandarijnen",
   "jaar": "2015",
   "afmetingen": "60 x 60 cm",
@@ -474,32 +417,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2015-stilleven-met-mandarijnen",
-  "w": 562,
-  "h": 550
- },
- {
-  "titel": "Schelpen",
-  "jaar": "2014",
-  "afmetingen": "50 x 40 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "650",
-  "status": "te koop",
-  "categorie": "Stilleven",
-  "slug": "2014-schelpen",
-  "w": 412,
-  "h": 550
- },
- {
-  "titel": "Stilleven met citroenen",
-  "jaar": "2014",
-  "afmetingen": "60 x 80 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "1495",
-  "status": "te koop",
-  "categorie": "Stilleven",
-  "slug": "2014-stilleven-met-citroenen",
-  "w": 752,
-  "h": 550
+  "foto": "2015-stilleven-met-mandarijnen-2",
+  "w": 1600,
+  "h": 1563
  },
  {
   "titel": "Stilleven met knoflook",
@@ -526,18 +446,6 @@ const SCHILDERIJEN = [
   "h": 550
  },
  {
-  "titel": "Stilleven met vazen en rozen",
-  "jaar": "2014",
-  "afmetingen": "50 x 40 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "niet te koop",
-  "categorie": "Stilleven",
-  "slug": "2014-stilleven-met-vazen-en-rozen",
-  "w": 434,
-  "h": 550
- },
- {
   "titel": "Trostomaten",
   "jaar": "2014",
   "afmetingen": "70 x 50 cm",
@@ -546,20 +454,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2014-trostomaten",
-  "w": 393,
-  "h": 550
- },
- {
-  "titel": "Westerkerk, Amsterdam",
-  "jaar": "2014",
-  "afmetingen": "70 x 50 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Landschap",
-  "slug": "2014-westerkerk-amsterdam",
-  "w": 381,
-  "h": 550
+  "foto": "2014-trostomaten-2",
+  "w": 1600,
+  "h": 1569
  },
  {
   "titel": "Bord met uien",
@@ -571,42 +468,6 @@ const SCHILDERIJEN = [
   "categorie": "Stilleven",
   "slug": "2013-bord-met-uien",
   "w": 430,
-  "h": 550
- },
- {
-  "titel": "Rode ui",
-  "jaar": "2013",
-  "afmetingen": "24 x 30 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Stilleven",
-  "slug": "2013-rode-ui",
-  "w": 778,
-  "h": 550
- },
- {
-  "titel": "Stilleven",
-  "jaar": "2013",
-  "afmetingen": "60 x 200 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Stilleven",
-  "slug": "2013-stilleven",
-  "w": 800,
-  "h": 235
- },
- {
-  "titel": "Stilleven met parmezaanse kaas",
-  "jaar": "2013",
-  "afmetingen": "70 x 50 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "795",
-  "status": "te koop",
-  "categorie": "Stilleven",
-  "slug": "2013-stilleven-met-parmezaanse-kaas",
-  "w": 427,
   "h": 550
  },
  {
@@ -622,78 +483,6 @@ const SCHILDERIJEN = [
   "h": 248
  },
  {
-  "titel": "Chinese schaal",
-  "jaar": "2012",
-  "afmetingen": "24 x 30 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Stilleven",
-  "slug": "2012-chinese-schaal",
-  "w": 734,
-  "h": 550
- },
- {
-  "titel": "Chinese schaal met kersen",
-  "jaar": "2012",
-  "afmetingen": "60 x 60 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Stilleven",
-  "slug": "2012-chinese-schaal-met-kersen",
-  "w": 542,
-  "h": 550
- },
- {
-  "titel": "Citroenen",
-  "jaar": "2012",
-  "afmetingen": "30 x 40 cm",
-  "techniek": "Olieverf op paneel",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Stilleven",
-  "slug": "2012-citroenen",
-  "w": 737,
-  "h": 550
- },
- {
-  "titel": "Frans meer",
-  "jaar": "2012",
-  "afmetingen": "80 x 80 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "395",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2012-frans-meer",
-  "w": 733,
-  "h": 550
- },
- {
-  "titel": "Franse daken",
-  "jaar": "2012",
-  "afmetingen": "70 x 100 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "495",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2012-franse-daken",
-  "w": 747,
-  "h": 550
- },
- {
-  "titel": "Franse landweg",
-  "jaar": "2012",
-  "afmetingen": "70 x 100 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "495",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2012-franse-landweg",
-  "w": 742,
-  "h": 550
- },
- {
   "titel": "Kersen",
   "jaar": "2012",
   "afmetingen": "20 x 40 cm",
@@ -706,30 +495,6 @@ const SCHILDERIJEN = [
   "h": 381
  },
  {
-  "titel": "St. Malo, Frankrijk",
-  "jaar": "2012",
-  "afmetingen": "70 x 90 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "395",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2012-st-malo-frankrijk",
-  "w": 733,
-  "h": 550
- },
- {
-  "titel": "Zandvoort",
-  "jaar": "2012",
-  "afmetingen": "50 x 70 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "295",
-  "status": "te koop",
-  "categorie": "Landschap",
-  "slug": "2012-zandvoort",
-  "w": 769,
-  "h": 550
- },
- {
   "titel": "Asperges",
   "jaar": "2011",
   "afmetingen": "40 x 60 cm",
@@ -738,20 +503,9 @@ const SCHILDERIJEN = [
   "status": "verkocht",
   "categorie": "Stilleven",
   "slug": "2011-asperges",
-  "w": 800,
-  "h": 507
- },
- {
-  "titel": "Stilleven met haring",
-  "jaar": "2011",
-  "afmetingen": "50 x 70 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "1050",
-  "status": "te koop",
-  "categorie": "Stilleven",
-  "slug": "2011-stilleven-met-haring",
-  "w": 780,
-  "h": 550
+  "foto": "2011-asperges-2",
+  "w": 1600,
+  "h": 936
  },
  {
   "titel": "Artisjok",
@@ -762,8 +516,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2010-artisjok",
-  "w": 800,
-  "h": 543
+  "foto": "2010-artisjok-2",
+  "w": 1600,
+  "h": 1045
  },
  {
   "titel": "Bloemkool",
@@ -774,8 +529,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Stilleven",
   "slug": "2010-bloemkool",
-  "w": 699,
-  "h": 550
+  "foto": "2010-bloemkool-2",
+  "w": 1600,
+  "h": 1566
  },
  {
   "titel": "Kreeft",
@@ -798,8 +554,9 @@ const SCHILDERIJEN = [
   "status": "niet te koop",
   "categorie": "Stilleven",
   "slug": "2010-paksoi",
-  "w": 800,
-  "h": 525
+  "foto": "2010-paksoi-2",
+  "w": 1600,
+  "h": 1005
  },
  {
   "titel": "De Gaap",
@@ -815,18 +572,6 @@ const SCHILDERIJEN = [
   "h": 1100
  },
  {
-  "titel": "Parq Quell 1",
-  "jaar": "2009",
-  "afmetingen": "50 x 70 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "550",
-  "status": "te koop",
-  "categorie": "Overig",
-  "slug": "2009-parq-quell-1",
-  "w": 733,
-  "h": 550
- },
- {
   "titel": "Snavelbek",
   "jaar": "2009",
   "afmetingen": "90 x 90 cm",
@@ -835,21 +580,9 @@ const SCHILDERIJEN = [
   "status": "te koop",
   "categorie": "Overig",
   "slug": "2009-snavelbek",
-  "foto": "2009-snavelbek-2",
-  "w": 1087,
-  "h": 1100
- },
- {
-  "titel": "De Wellustelling",
-  "jaar": "2008",
-  "afmetingen": "90 x 90 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": null,
-  "status": "verkocht",
-  "categorie": "Overig",
-  "slug": "2008-de-wellustelling",
-  "w": 488,
-  "h": 550
+  "foto": "2009-snavelbek-3",
+  "w": 1600,
+  "h": 1577
  },
  {
   "titel": "Het Colosseum",
@@ -875,17 +608,5 @@ const SCHILDERIJEN = [
   "foto": "2007-de-gehangene-2",
   "w": 1038,
   "h": 1100
- },
- {
-  "titel": "Sint Ursin",
-  "jaar": "2007",
-  "afmetingen": "70 x 50 cm",
-  "techniek": "Olieverf op doek",
-  "prijs": "950",
-  "status": "te koop",
-  "categorie": "Overig",
-  "slug": "2007-sint-ursin",
-  "w": 419,
-  "h": 549
  }
 ];
